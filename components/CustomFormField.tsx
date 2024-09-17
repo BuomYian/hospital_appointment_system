@@ -52,7 +52,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
         <div className="flex rounded-md border border-dark-500 bg-dark-400">
           {iconAlt && (
             <Image
-              src={iconSrc}
+              src={iconSrc ?? ""}
               alt={iconAlt || "icon"}
               height={24}
               width={24}
