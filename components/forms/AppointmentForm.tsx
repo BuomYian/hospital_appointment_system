@@ -29,7 +29,7 @@ const AppointmentForm = ({
   userId: string;
   patientId: string;
   type: "create" | "cancel" | "schedule";
-  appointment: Appointment;
+  appointment?: Appointment;
   setOpen: (value: boolean) => void;
 }) => {
   const router = useRouter();
@@ -48,7 +48,6 @@ const AppointmentForm = ({
     },
   });
 
-  // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof AppointmentFormValidation>) {
     setIsLoading(true);
 

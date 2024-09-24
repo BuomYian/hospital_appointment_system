@@ -101,7 +101,7 @@ export const updateAppointment = async ({
     // TODO: SMS notification
 
     revalidatePath("/admin");
-    return parseStringify(updateAppointment);
+    return parseStringify(updatedAppointment);
   } catch (error) {
     console.log(error);
   }
